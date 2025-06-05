@@ -50,7 +50,7 @@ def filter_bed(bed_file, fasta_file, mod_type, output_file, base):
 
     # Write filtered lines to output
     with open(output_file, "w") as f:
-        f.writelines(line + "\n" for line in filtered_lines)
+        f.writelines(line for line in filtered_lines)
 
 def main():
     parser = argparse.ArgumentParser(description="Filter modkit BED entries by reference base and thresholds")
